@@ -1,0 +1,584 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    /*设置上下左右外边距为0，body默认有上下左右外边距都是8px*/
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#header {
+    width: 100%;
+    height: 10%;
+    min-width: 1250px;
+    min-height: 60px;
+}
+
+
+/* 悬浮 */
+
+#header-left>a:hover {
+    color: #4e6ef2;
+}
+
+#header-left {
+    width: 500px;
+    height: 100%;
+    float: left;
+    padding-left: 24px;
+    font-size: 0;
+}
+
+
+/*给头部导航*/
+
+#header-left>a {
+    height: 24px;
+    margin-top: 19px;
+    margin-right: 24px;
+    /*因为超链接是内联元素，是没办法设置宽高的，将其转换为行内块元素后，就可以设置宽高了*/
+    display: inline-block;
+    color: #222;
+    font: 13px/23px Arial, sans-serif;
+    text-decoration: none;
+}
+
+#header-right {
+    width: 130px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    padding-right: 24px;
+}
+
+
+/* 搜索设置 */
+
+#setting:hover #more-setting {
+    display: block;
+}
+
+#setting {
+    width: 26px;
+    height: 25px;
+    margin-left: 24px;
+    margin-top: 19px;
+    display: inline-block;
+}
+
+#more-setting {
+    width: 84px;
+    height: 133px;
+    box-shadow: 0 2px 10px 0 rgba(0 0 0 /15%);
+    border-radius: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: relative;
+    top: 7px;
+    right: 29px;
+    display: none;
+}
+
+#more-setting a:hover {
+    color: #4e6ef2;
+}
+
+#more-setting a {
+    width: 52px;
+    height: 15px;
+    text-decoration: none;
+    font: 13px/23px Arial, sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+#setting-1,
+#setting-2,
+#setting-3,
+#setting-4,
+#setting-5 {
+    width: 52px;
+    height: 23px;
+    margin: 3px 16px 3px 16px;
+}
+
+#setting>a {
+    text-decoration: none;
+    font-weight: 400;
+    text-align: center;
+    color: #222;
+    font-size: 13px;
+    /*  position: relative;
+    bottom: 3px;*/
+}
+
+#login {
+    float: right;
+    margin-top: 18px;
+    margin-left: 32px;
+    background-color: #4e6ef2;
+    height: 24px;
+    width: 48px;
+    line-height: 24px;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    /* display: inline-block; */
+}
+
+#login>a {
+    text-decoration: none;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    position: relative;
+    bottom: 2px;
+    left: 11px;
+}
+
+#content {
+    width: 654px;
+    height: 80%;
+    min-height: 462px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+}
+
+
+/*logo*/
+
+#logo {
+    text-align: center;
+    position: relative;
+    bottom: 11px;
+    left: 2px;
+}
+
+
+/*中部大div*/
+
+#search {
+    width: 100%;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+}
+
+#camera img {
+    width: 24px;
+    height: 20px;
+    margin-top: -9px;
+    float: right;
+    z-index: 100;
+}
+
+
+/*搜索框*/
+
+#search-input {
+    width: 546px;
+    height: 44px;
+    float: left;
+    position: relative;
+    left: 2px;
+}
+
+
+/*文字的input*/
+
+#search-input>input {
+    width: 480px;
+    height: 16px;
+    padding: 12px 48px 12px 16px;
+    border: 2px solid #c4c7ce;
+    border-radius: 10px 0 0 10px;
+}
+
+#search-input>input:hover {
+    border-color: darkgray;
+}
+
+#search-input>input:focus {
+    border-color: #4e6ef2;
+    outline: none;
+}
+
+#search-btn input:hover {
+    background-color: #4261db;
+}
+
+
+/*按钮样式*/
+
+#search-btn input {
+    width: 108px;
+    height: 44px;
+    cursor: pointer;
+    padding: 0;
+    background-color: #4e6ef2;
+    border-radius: 0 10px 10px 0px;
+    border: none;
+    line-height: 45px;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 400;
+    position: relative;
+    left: 2px;
+    outline: 0 none;
+}
+
+
+/*按钮的div布局*/
+
+#search-btn {
+    width: 108px;
+    height: 44px;
+    float: right;
+}
+
+#footer {
+    width: 100%;
+    height: 10%;
+    min-width: 1250px;
+    min-height: 40px;
+}
+
+#footer-div>a:hover {
+    color: #222;
+}
+
+
+/*百度热搜样式布局*/
+
+#news-title {
+    width: 654px;
+    height: 24px;
+    margin-top: 48px;
+    cursor: pointer;
+}
+
+#news-title-refresh:hover,
+#news-title-hot:hover {
+    color: #4e6ef2;
+}
+
+#news-title-hot {
+    width: 72.984px;
+    height: 24px;
+    color: #222;
+    float: left;
+    font: 14px/24px Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/*换一换样式*/
+
+#news-title-refresh {
+    width: 60px;
+    height: 16px;
+    cursor: pointer;
+    float: right;
+    position: relative;
+    top: 1px;
+    font: 13px/23px Arial, sans-serif;
+    margin-left: 2px;
+    font-size: 14px;
+}
+
+
+/* 这是新闻样式布局*/
+
+ul {
+    width: 100%;
+    /*去掉ul的黑点*/
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.left {
+    margin: 0;
+    padding: 0;
+    width: 327px;
+    height: 36px;
+    float: left;
+}
+
+.right {
+    margin: 0;
+    padding: 0;
+    width: 327px;
+    height: 36px;
+    float: right;
+}
+
+
+/* 给新闻列表里面的超链接设置样式*/
+
+ul a {
+    width: 306px;
+    height: 36px;
+    float: left;
+    line-height: 36px;
+    color: #222;
+    text-decoration: none;
+    font: 14px/24px Arial, sans-serif;
+    /*background-color: #bbb;*/
+}
+
+
+/*给新闻表的数字设置样式*/
+
+.first-1 {
+    width: 22px;
+    height: 18px;
+    margin-right: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    position: relative;
+    top: 1px;
+    color: #fe2d46;
+    display: inline-block;
+}
+
+.first-2 {
+    width: 22px;
+    height: 18px;
+    margin-right: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    position: relative;
+    top: 1px;
+    color: #f89358;
+    display: inline-block;
+}
+
+.first-3 {
+    width: 22px;
+    height: 18px;
+    margin-right: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    position: relative;
+    top: 1px;
+    color: #fcc155;
+    display: inline-block;
+}
+
+.first {
+    width: 22px;
+    height: 18px;
+    margin-right: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 18px;
+    position: relative;
+    top: 1px;
+    color: #9195a3;
+    display: inline-block;
+}
+
+.second:hover,
+.second-1:hover,
+.second-2:hover,
+.second-3:hover {
+    text-decoration: underline;
+    color: #4e6ef2;
+}
+
+.second,
+.second-1,
+.second-2,
+.second-3 {
+    font-size: 16px;
+    line-height: 36px;
+    color: #222;
+}
+
+.third {
+    width: 12px;
+    height: 16px;
+    padding: 0 2px;
+    margin-left: 6px;
+    position: relative;
+    top: -2px;
+    background-color: #f60;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    line-height: 16px;
+    font-size: 12px;
+    border-radius: 4px;
+    font-weight: 200;
+}
+
+.third-2 {
+    width: 12px;
+    height: 16px;
+    padding: 0 2px;
+    margin-left: 6px;
+    position: relative;
+    top: -2px;
+    background-color: rgb(248, 22, 79);
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    line-height: 16px;
+    font-size: 12px;
+    border-radius: 4px;
+    font-weight: 200;
+}
+
+
+/*设置最大的div*/
+
+#more-div:hover #more-nav {
+    display: block;
+}
+
+#more-div {
+    width: 26px;
+    height: 23px;
+    padding-bottom: 19px;
+    margin: 19px 31px 0 0;
+    display: inline-block;
+    position: relative;
+}
+
+#more-div>a:hover {
+    color: #4e6ef2;
+}
+
+
+/*给“更多”这个超链接设置样式*/
+
+#more-div>a {
+    color: #222;
+    font: 13px/23px Arial, sans-serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/*调整更多下面的div*/
+
+#more-nav {
+    width: 228px;
+    height: 298px;
+    position: absolute;
+    top: 29px;
+    right: -12px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px 0 rgba(0 0 0 /15%);
+    border-radius: 12px;
+    z-index: 3;
+    display: none;
+}
+
+
+/*下面更多里面的行div*/
+
+#one {
+    width: 228px;
+    height: 70px;
+    padding-top: 15px;
+    /*   margin-left: 8px;*/
+    text-align: center;
+}
+
+#two {
+    width: 228px;
+    height: 70px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+#three {
+    width: 228px;
+    height: 84px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+#four {
+    width: 217px;
+    height: 27px;
+    padding-top: 5px;
+    margin-left: 8px;
+    text-align: center;
+}
+
+#one div:hover,
+#two div:hover,
+#three div:hover,
+#four>a:hover {
+    color: #4e6ef2;
+}
+
+#more-nav img:hover {
+    border-color: #ddf4ff;
+}
+
+#one>a,
+#two>a,
+#three>a {
+    width: 76px;
+    height: 70px;
+    float: left;
+    text-decoration: none;
+}
+
+#one div,
+#two div,
+#three div {
+    width: 76px;
+    height: 23px;
+    margin-top: 3px;
+    text-align: center;
+    color: #222;
+    font: 13px/23px Arial, sans-serif;
+}
+
+#four>a {
+    color: #9195a3;
+    font: 13px/23px Arial, sans-serif;
+    text-decoration: none;
+}
+
+#more-nav img {
+    border: 1px solid rgba(0, 0, 0, .03);
+    border-radius: 12px;
+}
+
+
+/*底部超链接布局*/
+
+#footer-div {
+    width: 964.800;
+    height: 39px;
+    font-size: 0;
+    text-align: center;
+}
+
+#footer-div>a,
+#footer-div>span {
+    margin-right: 20px;
+    color: #bbb;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    position: relative;
+    top: 47px;
+    left: 114px;
+}
